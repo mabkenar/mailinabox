@@ -536,7 +536,7 @@ def dnssec_choose_algo(domain, env):
 		# is preferred.
 		# Gandi tells me that .be does not support RSASHA1-NSEC3-SHA1
         # Nic.lv does not support RSASHA1-NSEC3-SHA1 for .lv tld's
-		return "RSASHA256"
+		return "ECDSAP256SHA256"
 
 	# For any domain we were able to sign before, don't change the algorithm
 	# on existing users. We'll probably want to migrate to SHA256 later.
