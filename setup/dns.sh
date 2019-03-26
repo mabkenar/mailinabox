@@ -88,7 +88,7 @@ mkdir -p "$STORAGE_ROOT/dns/dnssec";
 #  * .fund
 
 FIRST=1 #NODOC
-for algo in RSASHA1-NSEC3-SHA1 RSASHA256; do
+for algo in RSASHA1-NSEC3-SHA1 RSASHA256 ECDSAP256SHA256; do
 if [ ! -f "$STORAGE_ROOT/dns/dnssec/$algo.conf" ]; then
 	if [ $FIRST == 1 ]; then
 		echo "Generating DNSSEC signing keys..."
