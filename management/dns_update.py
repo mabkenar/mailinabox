@@ -540,7 +540,7 @@ def dnssec_choose_algo(domain, env):
 
 	# For any domain we were able to sign before, don't change the algorithm
 	# on existing users. We'll probably want to migrate to SHA256 later.
-	return "RSASHA1-NSEC3-SHA1"
+	return "ECDSAP256SHA256"
 
 def sign_zone(domain, zonefile, env):
 	algo = dnssec_choose_algo(domain, env)
